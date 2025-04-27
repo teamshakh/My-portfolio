@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohjaxon Sharipov - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a4d8c;
+            --secondary-color: #1e88e5;
+            --accent-color: #64b5f6;
+            --light-color: #bbdefb;
+            --dark-color: #01325e;
+            --text-color: #333;
+            --light-text: #f5f5f5;
+            --section-padding: 40px 20px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px; /* Footer uchun joy */
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            border-bottom: none;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--dark-color);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        /* Section styling */
+        section {
+            padding: var(--section-padding);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        /* Experience and Education sections */
+        .experience, .education {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .experience h3, .education h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .experience p, .education p {
+            margin-bottom: 12px;
+        }
+        
+        .experience p b, .education p b {
+            color: var(--secondary-color);
+        }
+        
+        .experience p i, .education p i {
+            color: #666;
+        }
+        
+        .experience ul, .education ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .experience li, .education li {
+            margin-bottom: 8px;
+        }
+        
+        /* Skills section */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            border: 1px solid #e6e6e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        td {
+            background-color: white;
+        }
+        
+        td ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        
+        td li {
+            margin-bottom: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: var(--dark-color);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        
+        footer p {
+            font-size: 1rem;
+        }
+        
+        footer b {
+            color: var(--accent-color);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h2 {
+                font-size: 1.8rem;
+            }
+            
+            nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            nav a {
+                padding: 12px 15px;
+            }
+            
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+            }
+            
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+            }
+            
+            td:before {
+                position: absolute;
+                top: 12px;
+                left: 15px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+            
+            td:nth-of-type(1):before { content: "Technical Skills"; }
+            td:nth-of-type(2):before { content: "Personal Skills"; }
+            td:nth-of-type(3):before { content: "Language Skills"; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h2>Shohjaxon Sharipov</h2>
+            <p><b>Email:</b> teamshokh@gmail.com</p>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience">
+                <h3>High School Academy Tashkent (September 2023 - July 2024)</h3>
+                <p><b>Sales manager</b></p>
+                <p><i>School visits and scientific activities. Dealing with sales calls.</i></p>
+                <ul>
+                    <li>Tests in mathematics and physics for testing.</li>
+                    <li>Finding and fixing video tutorial project errors.</li>
+                    <li>Management of test processes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education">
+                <h3>Tashkent State Technical University (September 2023 - Present)</h3>
+                <p><b>Faculty of "Electronics and Automation". Direction "Information systems and technologies".</b></p>
+            </div>
+            
+            <div class="education">
+                <h3>Samarkand International School (September 2022 - July 2023)</h3>
+                <p><b>A specialized course in mathematics and physics</b></p>
+                <p><i>Cumulative GPA: 4.67 out of 5.00</i></p>
+                <ul>
+                    <li>Recipient of S.I.school President's Award</li>
+                </ul>
+            </div>
+            
+            <div class="education">
+                <h3>Kattakurgan District 43rd General Education School</h3>
+                <p><b>Normal 11 years of education</b></p>
+                <p><i>Average rating: 5 out of 5 over 11 years</i></p>
+                <ul>
+                    <li>Gold medal from the district administration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technical Skills</th>
+                        <th>Personal Skills</th>
+                        <th>Language Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Java</li>
+                                <li>HTML, CSS</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Accurate</li>
+                                <li>Adaptable</li>
+                                <li>Ambitious</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>English (Intermediate)</li>
+                                <li>Russian (Conversational)</li>
+                                <li>Uzbek (Native)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>Contact me at <b>teamshokh@gmail.com</b></p>
+        </div>
+    </footer>
+</body>
+</html>
